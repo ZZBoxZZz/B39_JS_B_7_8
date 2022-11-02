@@ -95,4 +95,32 @@ document.getElementById("btnB8").onclick = function(){
     }
     document.getElementById("infoB8").innerHTML = mang;
 }
-//1
+//8
+
+function check_Prime(n){
+    if (n <= 1){
+        return false;
+    }
+    if (n % 2 == 0 && n >2){
+        return false;
+    }
+    const s = Math.sqrt(n);
+    for (let i = 3; i <= s;i+=2){
+        if(n%1 ===0){
+            return false;
+        }
+    }
+    return true;
+}
+document.getElementById("btnB9").onclick = function(){
+    let x = 0;
+    let y =0 ;
+    for(let i = 0; i < mang.length;i++){
+        x = check_Prime(mang[i]);
+        if(x == true){
+            y = mang[i];
+            break;
+        }
+    }
+    document.getElementById("infoB9").innerHTML = y;
+}
