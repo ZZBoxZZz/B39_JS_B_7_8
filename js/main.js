@@ -95,3 +95,4 @@ document.getElementById("btnB8").onclick = function(){
     }
     document.getElementById("infoB8").innerHTML = mang;
 }
+//1
