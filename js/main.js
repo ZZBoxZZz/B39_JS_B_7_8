@@ -124,3 +124,46 @@ document.getElementById("btnB9").onclick = function(){
     }
     document.getElementById("infoB9").innerHTML = y;
 }
+//9
+let mang3 = [];
+document.getElementById("btnB10").onclick = function(){
+    
+    var x = document.getElementById("b10").value *1;
+    mang3.push(x);
+    document.getElementById("infoB10").innerHTML = mang3;
+}
+
+document.getElementById("btnB11").onclick = function(){
+    var count = 0;
+    for(let i = 0 ; i<mang3.length;i++){
+        if(Number.isInteger(mang3[i])==true){
+            count++;
+        }
+    }
+    document.getElementById("infoB11").innerHTML ="Số nguyên: "+count;
+}
+
+//10
+document.getElementById("btnB12").onclick = function(){
+    console.log(mang3);
+    let duong = 0;
+    let am = 0;
+    for(let i = 0 ; i<mang3.length;i++){
+        console.log(mang3[i]);
+        if(mang3[i] >= 0 ){
+            duong++;
+        } else {
+            am++;
+        }
+    }
+    console.log(duong);
+    console.log(am);
+    if(duong>am){
+        document.getElementById("infoB12").innerHTML ="Số dương > Số âm ";
+    } else if (duong < am){
+        document.getElementById("infoB12").innerHTML ="Số dương < Số âm ";
+    } else {
+        document.getElementById("infoB12").innerHTML ="Số dương = Số âm ";
+    }
+    
+}
